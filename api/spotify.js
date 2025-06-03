@@ -1,12 +1,12 @@
 export default async function handler(req, res) {
  // CORS headers
-  res.setHeader("Access-Control-Allow-Origin", "*"); // note that during production, the * will change to the url of my project
+  res.setHeader("Access-Control-Allow-Origin", "https://music-vibe-matcher.vercel.app"); // note that during production, the * will change to the url of my project
 res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
 res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   // Preflight request
   if (req.method === "OPTIONS") {
-      res.setHeader("Access-Control-Allow-Origin", "*"); // note that during production, the * will change to the url of my project
+      res.setHeader("Access-Control-Allow-Origin", "https://music-vibe-matcher.vercel.app"); // note that during production, the * will change to the url of my project
 res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
 res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     return res.status(200).end();
