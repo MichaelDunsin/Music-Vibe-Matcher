@@ -63,7 +63,7 @@ return (
       onHoverEnd={() => setIsHovered(false)}
       className="relative mb-4">
         <img
-          src={song.album.images[1].url}
+          src={song.album.images[2].url}
           alt={`${song.name} track cover`}
           className="w-full aspect-square rounded-xl object-cover"
         />

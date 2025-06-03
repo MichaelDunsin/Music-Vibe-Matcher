@@ -13,7 +13,7 @@ const location = useLocation();
 const { emotion, setEmotion, setEndTracks, setError } = useStore();
 
 const HandleSubmit = async (text) => {
-  const response = await fetch('https://music-vibe-matcher.vercel.app/api/mood', { // note that during production, this url would change to the url of my project https://my-backend.onrender.com/api/mood and in development, it would be the url of my localhost/api/mood
+  const response = await fetch('https://music-vibe-matcher.vercel.app/api/mood', { // note that during production, this url would change to the url of my project https://my-backend.onrender.com/api/mood and in development, it would be the url of my localhost/api
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
