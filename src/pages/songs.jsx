@@ -12,6 +12,7 @@ const { Endtracks, error, emotion } = useStore();
  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
 
+
 return (
 <>
 <AnimatePresence>
@@ -62,7 +63,7 @@ return (
       onHoverEnd={() => setIsHovered(false)}
       className="relative mb-4">
         <img
-          src={song.album.images[0].url}
+          src={song.album.images[1].url}
           alt={`${song.name} track cover`}
           className="w-full aspect-square rounded-xl object-cover"
         />
