@@ -59,7 +59,7 @@ return (
             <img
               src={Track.album.images[0].url}
               alt={`${Track.name} album art`}
-              className="w-80 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl mx-auto md:mx-0 mb-6 shadow-2xl"
+              className="w-80 h-80 md:w-96 md:h-96 rounded-2xl mx-auto md:mx-0 mb-6 shadow-2xl"
             />
           </motion.div>
 

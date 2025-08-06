@@ -77,7 +77,8 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
       }
 
       const filteredPlaylists = searchData.playlists.items.filter(p => p !== null);
-    const firstPlaylist = filteredPlaylists[0]
+      const randomValue = Math.floor(Math.random() * 3);
+    const firstPlaylist = filteredPlaylists[randomValue] || filteredPlaylists[0];
 
  const tracksData = await fetch(`https://api.spotify.com/v1/playlists/${firstPlaylist.id}/tracks`, {
     headers: {

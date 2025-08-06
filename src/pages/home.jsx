@@ -112,6 +112,12 @@ return (
               placeholder="I feel..."
               value={emotion}
                onChange={(e) => setEmotion(e.target.value)}
+                onKeyDown={(e) => {
+                if (e.key === 'Enter' && emotion.trim()) {
+                  HandleSubmit(emotion);
+                  navigate("/songs");
+                }
+                }}
               className="w-full h-14 text-sm sm:text-base px-6 bg-gray-800 border-[2px] border-transparent rounded-full focus:border-green-900 focus:outline-none placeholder-gray-400"
             />
           </div>
