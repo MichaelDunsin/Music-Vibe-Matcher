@@ -1,12 +1,59 @@
-# React + Vite
+# 🎵 Music Vibe Matcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Music Vibe Matcher is a web app that connects your mood to the perfect playlist. Just type how you feel, and the app detects your mood and curates a list of 10–15 tracks using the Spotify API — complete with track info, and links to Spotify and Youtube.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[🔗 Try it here](https://music-vibe-matcher.vercel.app/)
 
-## Expanding the ESLint configuration
+![Screenshot](/public/big-image.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌟 Features
+
+- 🎧 **Mood Detection**: Enter how you're feeling — the app understands and processes your emotion.
+- 🔍 **Smart Song Selection**: Automatically matches moods with tracks using Spotify’s Recommendations API.
+- 💡 **AI-Enhanced**: Uses AI to interpret freeform text and translate it into musical vibes.
+- 🎨 **Clean UI**: Built with React, Tailwind CSS, Framer Motion for a smooth and modern user experience.
+- 🔊 **Track Info**: See information about each track and links to access them on Spotify and Youtube.
+- 📱 **Responsive Design**: Works beautifully across mobile and desktop.
+
+## 🛠️ Built With
+
+- **React**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Zustand** for state management
+- **Spotify Web API**
+- **Model from HuggingFace** [🔗 Link here](https://huggingface.co/facebook/bart-large-mnli)
+
+
+
+## 🎮 Usage
+```md
+## 🕹️ How It Works
+
+1. Type in how you feel (e.g. "I'm feeling calm but a little sad").
+2. The app interprets your mood using AI and maps it to song characteristics.
+3. A playlist is generated using Spotify's Recommendations API.
+4. Scroll through and see track recommendations directly from the UI.
+```
+
+## 📸 Screenshots
+
+### 1. Input mood and click enter
+![Mood Input](/public/big-image.png)
+
+### 2. The backend analyses your input and generate selects tracks based on it
+![Song Cards](/public/loading.png)
+
+### 3. The selected tracks are displayed for you to explore
+![Mood Input](/public/songs.png)
+
+### 4. Select the track you want and explore on Spotify or Youtube
+![Song Cards](/public/preview.png)
+
+## 🙏 Acknowledgements
+
+- [Spotify for Developers](https://developer.spotify.com/)
+- [Huggingface](https://huggingface.co/)
+
