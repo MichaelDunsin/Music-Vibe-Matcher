@@ -44,7 +44,7 @@ Music Vibe Matcher is a web app that connects your mood to the perfect playlist.
 ![Mood Input](/public/big-image.png)
 
 ### 2. The backend analyses your input and generate selects tracks based on it
-![Song Cards](/public/loading.png)
+![Song Cards](/public/loading.PNG)
 
 ### 3. The selected tracks are displayed for you to explore
 ![Mood Input](/public/songs.png)
