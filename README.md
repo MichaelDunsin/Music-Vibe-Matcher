@@ -6,8 +6,7 @@ Music Vibe Matcher is a web app that connects your mood to the perfect playlist.
 
 [🔗 Try it here](https://music-vibe-matcher.vercel.app/)
 
-![Screenshot](/public/big-image.PNG)
-
+![Screenshot](/public/big-image.png)
 ## 🌟 Features
 
 - 🎧 **Mood Detection**: Enter how you're feeling — the app understands and processes your emotion.
@@ -44,7 +43,7 @@ Music Vibe Matcher is a web app that connects your mood to the perfect playlist.
 ![Mood Input](/public/big-image.png)
 
 ### 2. The backend analyses your input and generate selects tracks based on it
-![Song Cards](/public/loading.PNG)
+![Song Cards](/public/loading.png)
 
 ### 3. The selected tracks are displayed for you to explore
 ![Mood Input](/public/songs.png)
