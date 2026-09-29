@@ -57,11 +57,25 @@ export default async function handler(req, res) {
   return topEmotions;
 }
 
-const emotions = getTopEmotions(data.labels, data.scores)
-
-    if (data.error) {
-      return res.status(500).json({ error: data.error });
+    if (!response.ok || data.error) {
+      return res.status(500).json({ error: data.error || `Hugging Face error ${response.status}` });
     }
+
+    // Hugging Face's router now returns [{ label, score }, ...] instead of { labels: [...], scores: [...] }.
+    // Support both shapes, sorted by score (highest first).
+    let labels, scores;
+    if (Array.isArray(data)) {
+      const sorted = [...data].sort((a, b) => b.score - a.score);
+      labels = sorted.map(d => d.label);
+      scores = sorted.map(d => d.score);
+    } else if (Array.isArray(data.labels) && Array.isArray(data.scores)) {
+      labels = data.labels;
+      scores = data.scores;
+    } else {
+      return res.status(500).json({ error: 'Unexpected Hugging Face response', details: data });
+    }
+
+    const emotions = getTopEmotions(labels, scores)
 
     res.status(200).json({ emotions: emotions });
   } catch (err) {
